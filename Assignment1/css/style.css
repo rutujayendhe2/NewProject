@@ -1,0 +1,51 @@
+body {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+
+  .divHeader{
+      text-align: right;
+      border: 1px solid;
+  }
+  
+  .divAddress{
+      text-align: left;
+      float: right;
+  }
+
+
+  .divReturnAddress{
+      text-align: left;
+      float:left;
+      padding: 5%;
+  }
+  .divSubject{
+      clear: both;
+      font-weight: bold;
+      padding-top: 80px;
+  }
+  .sender-column {
+    text-align: right;
+  }
+  
+
+  .divAdios{
+      float: left;
+      padding-top: 50px;
+  }
+  
+  h1 {
+    font-size: 1.5em;
+  }
+  
+  h2 {
+    font-size: 1.3em;
+  }
+  
+  p,ul,ol,dl {
+    font-size: 1.1em;
+  }
+  
+  p, li, dd, dt {
+    line-height: 1.5;
+  }

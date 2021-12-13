@@ -1,0 +1,178 @@
+<!DOCUMENT html>
+<html lang="en">
+<head>
+<title>CSS Template</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+html
+{
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+ margin:0;
+padding:0;
+}
+
+/* Style the header */
+header {
+  background-color: Green;
+  padding: 20px;
+  text-align: center;
+  color: Black;
+  border: 3px solid #73AD21
+}
+h1 {​​ 
+   font-size: 4rem;
+     text-align: center;
+     text-shadow: 2px 2px 10px black;
+   }​​  
+h2 {​​   
+	font-size: 3rem;
+	    text-align: center;
+	  }
+
+
+
+/* Create two columns/boxes that floats next to each other */
+nav {
+ display:block;
+  float: Center;
+  width: o;
+  /* height: 300px; only for demonstration, should be removed */
+  background: Green;
+  padding: 10px;
+} 
+
+/* Style the list inside the menu */
+nav ul {
+  list-style-type: none;
+  margin:2;
+  padding: 10px;
+overflow:hidden;
+}
+
+li{
+	float:left;
+}
+
+li a {
+  display: block;
+  color: Black;
+  text-align: center;
+  padding: 15px 6px;
+  text-decoration: none;
+}
+
+li a:hover {
+  background-color: #111;
+}
+
+
+article {
+  float: left;
+  padding: 20px;
+  width: 30%;
+  background-color: Green;
+  color:Black;
+  border: 3px solid #73AD21
+  height: 400px; /* only for demonstration, should be removed */
+}
+
+/* Clear floats after the columns */
+section::after {
+  content: "";
+  display: ;
+ clear: both;
+ border: 3px solid #73AD21
+background-color:Green;
+
+}
+aside{
+	background-color:Green;
+	Margin-left:10px;
+	padding:10;
+}
+aside img{
+	max-width:200;
+	max-height:200;
+	background-color: Green;
+
+}
+
+/* Style the footer */
+footer {
+	margin-top:10px;
+	background-color: Green;
+    padding: 50px;
+	text-align: center;
+	color: Black;
+   border: 3px solid #73AD21
+}
+
+@media (max-width: 600px) {
+   article {
+    width: 60%;
+	background-color: Green;
+
+    height: ;
+	
+  }
+}
+</style>
+</head>
+<body>
+
+
+
+<header>
+  <h1>BIRDWATCHING</h1>
+  <img src="logo.jpg" align="right">
+ <nav>
+    <ul>
+         <li><a href="#">HOME</a></li>  
+         <li><a href="#"> GET STARTED</a></li>  
+	     <li><a href="#">PHOTOS</a></li>    
+	     <li><a href="#">GEAR</a></li> 
+         <li><a href="#">FORUM</a></li>
+      
+    </ul>
+
+</nav>
+
+  
+  </header>
+<section>
+
+<article>
+    <h2>WELCOME</h2>
+
+    <p>Welcome to our fake birdwatching site.if this were a real site.It would be the ideal place to come to learn more about birdwatching,whether you are a beginner looking to learn how to get birding.or an expert wanting to share ideas,tips and photos with other like-minded people.</p>
+    
+    <p>So don't waste time! get what you need,then turn off your computer and get out into the greatdoors.</p>
+
+
+</article>
+<aside>
+
+	<h2>Favourite Photos</h2>
+	
+
+<aside img>
+    <img src="image.png"  alt="photo" >
+</aside>
+
+</section>
+
+
+<footer>
+  
+	<p>This fake website example is CCO - any part of this code may be reused in any way you wish Originalexample written by Chris Mills,2016.</p>
+ 
+    <p>Dove icon by Lore.</p>
+</footer>
+</body>
+</html>
+
