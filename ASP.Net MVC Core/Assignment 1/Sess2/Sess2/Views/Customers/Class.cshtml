@@ -1,0 +1,19 @@
+﻿@*Specify data type ViewModel to create a strongly typed View*@
+@model List<Sess2.Models.Data.Customer>
+
+<h2>Customer</h2>
+<hr />
+
+<div>
+    <h4 class="alert-heading">Customer List</h4>
+    <ul class="list list-unstyled">
+        @foreach (var customer in Model)
+        {
+            <li>
+                @customer.Customerid : @customer.Companyname And @customer.Address
+            </li>
+        }
+    </ul>
+
+
+</div>

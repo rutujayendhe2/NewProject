@@ -1,0 +1,19 @@
+﻿@*Specify data type ViewModel to create a strongly typed View*@
+@model List<Sess2.Models.Data.Product>
+
+<h2>Product</h2>
+<hr/>
+
+<div>
+    <h4 class="alert-heading">Product List</h4>
+        <ul class="list list-unstyled">
+            @foreach (var product in Model)
+            {
+                <li>
+                    @product.Productid : @product.Productname costs @product.Unitprice
+                </li>
+            }
+        </ul>
+    
+
+</div>

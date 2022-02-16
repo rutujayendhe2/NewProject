@@ -1,0 +1,12 @@
+D:\Dotnet\Asp.net MVC core\day1\Sess2\Sess2.Models.Data\bin\Debug\netcoreapp3.1\Sess2.Models.Data.deps.json
+D:\Dotnet\Asp.net MVC core\day1\Sess2\Sess2.Models.Data\bin\Debug\netcoreapp3.1\Sess2.Models.Data.runtimeconfig.json
+D:\Dotnet\Asp.net MVC core\day1\Sess2\Sess2.Models.Data\bin\Debug\netcoreapp3.1\Sess2.Models.Data.runtimeconfig.dev.json
+D:\Dotnet\Asp.net MVC core\day1\Sess2\Sess2.Models.Data\bin\Debug\netcoreapp3.1\Sess2.Models.Data.dll
+D:\Dotnet\Asp.net MVC core\day1\Sess2\Sess2.Models.Data\bin\Debug\netcoreapp3.1\Sess2.Models.Data.pdb
+D:\Dotnet\Asp.net MVC core\day1\Sess2\Sess2.Models.Data\obj\Debug\netcoreapp3.1\Sess2.Models.Data.GeneratedMSBuildEditorConfig.editorconfig
+D:\Dotnet\Asp.net MVC core\day1\Sess2\Sess2.Models.Data\obj\Debug\netcoreapp3.1\Sess2.Models.Data.AssemblyInfoInputs.cache
+D:\Dotnet\Asp.net MVC core\day1\Sess2\Sess2.Models.Data\obj\Debug\netcoreapp3.1\Sess2.Models.Data.AssemblyInfo.cs
+D:\Dotnet\Asp.net MVC core\day1\Sess2\Sess2.Models.Data\obj\Debug\netcoreapp3.1\Sess2.Models.Data.csproj.CoreCompileInputs.cache
+D:\Dotnet\Asp.net MVC core\day1\Sess2\Sess2.Models.Data\obj\Debug\netcoreapp3.1\Sess2.Models.Data.dll
+D:\Dotnet\Asp.net MVC core\day1\Sess2\Sess2.Models.Data\obj\Debug\netcoreapp3.1\Sess2.Models.Data.pdb
+D:\Dotnet\Asp.net MVC core\day1\Sess2\Sess2.Models.Data\obj\Debug\netcoreapp3.1\Sess2.Models.Data.genruntimeconfig.cache
