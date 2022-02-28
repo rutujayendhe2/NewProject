@@ -1,0 +1,164 @@
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-lg-6 col-md-8 col-sm-10 offset-lg-0 offset-md-2 offset-sm-1">
+      <div class="mobile h5">Billing Address</div>
+      <div id="details" class="bg-white rounded pb-5">
+        <div class="submit-form">
+          <div *ngIf="!submitted">
+            <div class="form-group">
+              <mat-form-field class="example-full-width" appearance="fill">
+                <mat-label>Name</mat-label>
+
+                <input matInput type="text" id="name" required [(ngModel)]="order.fullname" name="fullname"
+                  placeholder="Enter Full Name" />
+              </mat-form-field>
+            </div>
+            <div class="form-group">
+              <mat-form-field class="example-full-width" appearance="fill">
+                <mat-label>Email</mat-label>
+
+                <input matInput type="text" id="email" required [(ngModel)]="order.email" name="email"
+                  placeholder="Enter Email Id" />
+              </mat-form-field>
+            </div>
+            <div class="form-group">
+              <mat-form-field class="example-full-width" appearance="fill">
+                <mat-label>Phone</mat-label>
+
+                <input matInput type="text" id="phone" required [(ngModel)]="order.phone" name="phone"
+                  placeholder="Enter Mobile Number" />
+              </mat-form-field>
+            </div>
+            <div class="form-group">
+              <mat-form-field class="example-full-width" appearance="fill">
+                <mat-label>City</mat-label>
+
+                <input matInput type="text" id="city" required [(ngModel)]="order.city" name="city"
+                  placeholder="Enter City" />
+              </mat-form-field>
+            </div>
+            <div class="form-group">
+              <mat-form-field class="example-full-width" appearance="fill">
+                <mat-label>Zip</mat-label>
+
+                <input matInput type="text" id="zip" required [(ngModel)]="order.zip" name="zip"
+                  placeholder="Enter ZipCode" />
+              </mat-form-field>
+            </div>
+            <div class="form-group">
+              <mat-form-field class="example-full-width" appearance="fill">
+                <mat-label>Address</mat-label>
+
+                <input matInput type="text" id="address" required [(ngModel)]="order.address" name="address"
+                  placeholder="Enter Full Address" />
+              </mat-form-field>
+            </div>
+            <div class="form-group">
+              <mat-form-field class="example-full-width" appearance="fill">
+                <mat-label>State</mat-label>
+
+                <input matInput type="text" id="state" required [(ngModel)]="order.state" name="state"
+                  placeholder="Enter State" />
+              </mat-form-field>
+            </div>
+            <div class="form-group">
+              <mat-form-field class="example-full-width" appearance="fill">
+                <mat-label>Country</mat-label>
+
+                <input matInput type="text" id="country" required [(ngModel)]="order.country" name="country"
+                  placeholder="Enter Country" />
+              </mat-form-field>
+            </div>
+            <div class="form-group">
+              <mat-form-field class="example-full-width" appearance="fill">
+                <mat-label>Remark</mat-label>
+
+                <input matInput type="text" id="status" required [(ngModel)]="order.status" name="status"
+                  placeholder="Enter Your Remark" />
+              </mat-form-field>
+            </div>
+            <div class="form-group">
+              <mat-form-field class="example-full-width" appearance="fill">
+                <mat-label>Total price</mat-label>
+
+                <input matInput type="text" id="totalprice" required [(ngModel)]="order.totalprice"
+                  name="totalprice" />
+                  
+              </mat-form-field>
+            </div> 
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-lg-6 col-md-8 col-sm-10 offset-lg-0 offset-md-2 offset-sm-1">
+      <div class="mobile h5">Billing Address</div>
+      <div id="details" class="bg-white rounded pb-5">
+
+        <div class="col" style="width: 73%; height: 80%">
+          <br />
+          <img src="../../../assets/download.jpg" alt="Order form" class="img-fluid" style="padding-left: 90px" />
+
+          <br />
+          <br />
+          </div>
+
+        <div class="h4 pt-3">
+          <table class="table table-responsive" style="border: 1px solid black">
+            <thead>
+              <tr>
+                <th><h2><b> Product Name</b></h2></th>
+                <th><h2><b> Quantity</b></h2></th>
+                <th><h2><b> Total</b></h2></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let i of productList">
+                <td>{{ i.product.title }}</td>
+                <td>{{ i.quantity }}</td>
+                <td>{{ i.product.price * i.quantity }}</td>
+              </tr>
+              <br />
+              <tr>
+                <td *ngIf="grandTotal > 0">
+                  <h3>
+                    <strong> Grand Total : {{ grandTotal }} </strong>
+                  </h3>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="h4 pt-3">
+          <span>Payment Method</span>
+          <div class="d-flex align-items-center py-2">
+            <div class="display-5">
+              <mat-checkbox [ngModel]="myModel" class="example-margin">
+                <label>Cash On Delivery</label>
+              </mat-checkbox>
+            </div>
+          </div>
+        </div>
+
+        <br />
+              <div id="orderbutton">
+                <button (click)="saveOrder()" routerLink="/payment" class="btn btn-success">
+                  Place Order
+                </button>
+                <button (click)="emptycart()" routerLink="/home" class="btn btn-danger">
+                  Cancel
+                </button>
+                <button routerLink="/products" class="btn btn-primary">
+                  Shop More
+                </button>
+              </div>
+              <br>
+              <br>
+              <br>
+              <br>
+              <br>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,74 @@
+<section class="vh-200" style="background-color: #f3ffe6;">
+  <div class="container py-5 h-100">
+      <div class="row d-flex justify-content-center align-items-center h-100">
+
+
+        <div class="cart style=border-radius: 1rem;">
+          <div class="col-md-6 offset-md-3 mt-4">
+           <h1 class="text-center"><strong>Registration</strong></h1>
+              <form #form="ngForm" (ngSubmit)="onSubmit(form)">
+                  <div class="mb-3">
+                      <label for="registerFirstname" class="form-label">First Name</label>
+                      <input type="text"  name="Firstname" ngModel required #Firstname="ngModel"
+                      class="form-control"
+                      id="firstName"
+                      placeholder="Enter First Name">
+                  </div>
+                  <div class="mb-3">
+                      <label for="registerLastname" class="form-label">Last Name</label>
+                      <input type="text"  name="lastname" ngModel required #lastname="ngModel"
+                      class="form-control"
+                      id="lastName"
+                      placeholder="Enter last Name">
+                  </div>
+                  <div class="mb-3">
+                      <label for="registeruseriEmailid" class="form-label">Email address</label>
+                      <input type="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"name="email" ngModel required #email="ngModel"
+                      class="form-control"
+                      id="emailAdd"
+                      aria-describedby="emailHelp"
+                      placeholder="Enter Email Address"
+                      oninput="check(this)" required
+                      >
+                    </div>
+                  <div class="mb-3">
+                      <label for="registeruserMobileNumber" class="form-label">Phone Number</label>
+                      <input type="tel"  pattern=".{10}" name="phoneNo" maxlength="10" ngModel required #phoneNo="ngModel"
+                      class="form-control"
+                      id="phoneNo"
+                      placeholder="Enter Mobile Number"
+                      oninput="check(this)" required
+                      >
+                    </div>
+                  <div class="mb-3">
+                      <label for="registeruserAddress" class="form-label">Address</label>
+                      <input type="text"  name="Address" ngModel required #Address="ngModel"
+                      class="form-control"
+                      id="address"
+                      placeholder="Enter Address">
+                    </div>
+                    <div class="mb-3" >
+
+                      <label for="password1" class="form-label">Password</label>
+                      <input type="password"  name="password" ngModel required #password="ngModel"
+                      class="form-control" id="password"
+                      placeholder="Enter Password">
+                    </div>
+                    <div class="mb-3" >
+                      <label for="Comfirmpassword1" class="form-label">Confirm Password</label>
+                      <input type="password"  name="Confirmpassword" ngModel required #Confirmpassword="ngModel"
+                      class="form-control" id="confirmPassword"
+                      placeholder="Enter Password">
+                    </div>
+
+                    <a routerLink="/login">Already registered?? Click to !!</a><br>
+                  <div class="pt-1 mb-4">
+
+                    <button type="submit" [disabled]="form.invalid"
+                    class="btn btn-dark btn-lg btn-block">Register</button>
+                  </div>
+                </form>
+          </div>
+        </div>
+      </div>
+    </div>

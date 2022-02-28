@@ -1,0 +1,109 @@
+<!-- <div class="col-lg-6 col-md-8 col-sm-10 offset-lg-0 offset-md-2 offset-sm-1"> -->
+  <nav class="navbar navbar-expand-lg bg-dark navbar-dark bb" id="xy">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon "></span>
+    </button>
+
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <!-- <li class="nav-item"><a class="nav-link" routerLink="/admin-home" id="colarr">Home</a></li> -->
+        <li class="nav-item"><a class="nav-link" routerLink="/admin-user" id="colarr">Users management</a></li>
+        <li class="nav-item"><a class="nav-link" routerLink="/admin-product" id="colarr">product management</a></li>
+        <li class="nav-item"><a class="nav-link" routerLink="/admin-order" id="colarr">Order management</a></li>
+      </ul>
+
+    </div>
+  </nav>
+
+<div class="container-fluid">
+
+
+</div>
+
+  <div class="col-lg-4 col-md-4 col-sm-10"></div>
+    <!-- <div class="Head">Product Details</div> -->
+    <div id="details" class="bg-white rounded pb-5">
+  <div class="submit-form">
+    <h1><strong>Add Product</strong></h1>
+    <div *ngIf="!submitted">
+        <div class="form-group">
+            <mat-form-field class="example-full-width" appearance="fill">
+                <mat-label>Product Name</mat-label>
+
+                <input matInput type="text" id="title" required [(ngModel)]="product.title" name="title" placeholder="Enter Product Name"/>
+              </mat-form-field>
+        </div>
+        <div class="form-group">
+            <mat-form-field class="example-full-width" appearance="fill">
+                <mat-label>Price</mat-label>
+
+                <input matInput type="text" id="price" required [(ngModel)]="product.price" name="price" placeholder="Enter price"/>
+              </mat-form-field>
+        </div>
+        <div class="form-group">
+            <mat-form-field class="example-full-width" appearance="fill">
+                <mat-label>Description</mat-label>
+
+                <input matInput type="text" id="description" required [(ngModel)]="product.description" name="description" placeholder="Enter Description"/>
+              </mat-form-field>
+        </div>
+        <div class="form-group">
+            <mat-form-field class="example-full-width" appearance="fill">
+                <mat-label>Category</mat-label>
+
+                <input matInput type="text" id="category" required [(ngModel)]="product.category" name="category" placeholder="Enter Category"/>
+              </mat-form-field>
+        </div>
+        <div class="form-group">
+            <mat-form-field class="example-full-width" appearance="fill">
+                <mat-label>Image Path</mat-label>
+
+                <input matInput type="text" id="image" required [(ngModel)]="product.image" name="image" placeholder="Enter Image Path"/>
+              </mat-form-field>
+        </div>
+  <br>
+        <button (click)="saveProduct()" routerLink="" id="ProductAddSubmitButton" class="btn btn-success">Save Product</button>
+    </div>
+  </div>
+    </div>
+
+
+  <div class="container" id="Product">
+     <hr/>
+      <h1 class="text-center"><strong>Product Details</strong></h1>
+      <hr/>
+       <table class="table table-success table-striped"
+
+       style="background-color: white; margin-top: 20px;  box-shadow: 0px 0px 19px 5px rgba(0, 0, 0, 0.5);">
+        <thead>
+        <tr>
+          <th>Product Name</th>
+          <th>Price</th>
+          <th>Description</th>
+          <th>Category</th>
+          <th>Image</th>
+          <th width="220px">Action</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let product of Productlist">
+
+          <td>{{ product.title }}</td>
+          <td>{{ product.price }}</td>
+          <td>{{ product.description }}</td>
+          <td>{{ product.category }}</td>
+          <td>{{ product.image }}</td>
+          <td>
+            <!-- <a  [routerLink]="['/Products/',product.id,'UpdateDetails']" class="btn btn-primary"> <i class="material-icons">edit</i></a> &nbsp; -->
+            <button type="submit" (click)="deleteProduct(product.id)" class="btn btn-danger delete btn"><i class="material-icons">delete</i></button>
+            <!-- <i class="material-icons">delete</i> -->
+          </td>
+          <hr/>
+        </tr>
+
+      </tbody>
+      </table>
+   </div>
+

@@ -1,0 +1,47 @@
+<nav class="navbar navbar-expand-lg navbar bg-success">
+  <div class="container-fluid bg-success">
+    <a class="navbar-brand " href="#" ><b>Sabji-Mart</b> </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse bg-success" id="navbarNavDropdown">
+      <ul class="navbar-nav" style="color: rgb(46, 42, 42)">
+
+        <li class="nav-item">
+          <a class="nav-link" [routerLink]="['home']" routerLinkActive= "active" ><strong> Home </strong></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" [routerLink]="['aboutus']" routerLinkActive= "active"><strong>About us</strong></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link " [routerLink]="['classification-vegitables']" routerLinkActive= "active"><strong>Classification of Veggies</strong></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" [routerLink]="['register']" routerLinkActive= "active"><strong> Register</strong></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" [routerLink]="['login']" routerLinkActive= "active"><strong>Login</strong></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" [routerLink]="['admin-login']" routerLinkActive= "active"><strong>Admin Login</strong></a>
+        </li>
+
+      </ul>
+    </div>
+    <form class="d-flex">
+
+      <input class="form-control me-2" type="search" [(ngModel)]="searchTerm" (keyup)="search($event)" placeholder="Search" aria-label="Search">
+
+      <button class="btn btn-secondary" id="searchbtn" type="submit">Search</button>
+
+    </form>
+    <div class="col-sm-4 col-md-2 col-xl-2 bg-success">
+      <button routerLink="cart" class="btn cart-btn">
+        <i style="font-size: 30px; color:black;" class="fas fa-cart-plus"></i>
+        <div style="font-size:10px;" class="badge bg-danger"></div>
+        <div style="font-size:10px;" class="badge bg-danger">{{totalItem}}</div>
+      </button>
+    </div>
+
+  </div>
+</nav>

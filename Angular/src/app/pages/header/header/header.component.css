@@ -1,0 +1,49 @@
+div{
+    background-color:rgb(20, 19, 19);
+    text-align: center;
+    padding: 5px;
+    color: rgb(10, 10, 10);
+}
+
+nav{
+    background-color:rgb(24, 22, 22);
+    display: block;
+    text-align: center;
+    padding: 20px;
+    font-size: 15px;
+    color: rgb(24, 22, 22);
+}
+
+
+
+/* .nav.navbar-nav.navbar-right li  {
+    color: white;
+}
+
+#navbar-nav{
+    color:white;
+}
+
+.nav-link{
+    color:white;
+}
+
+.navbar-light .navbar-brand {
+    color: white;
+}
+
+li{
+    color: white;
+} */
+
+
+#searchbtn{
+    background-color:  #142e21;
+}
+
+a{
+    color: rgb(5, 5, 5);
+}
+
+
+

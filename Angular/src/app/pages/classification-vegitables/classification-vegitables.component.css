@@ -1,0 +1,58 @@
+#page{
+  margin-left: auto;
+  margin-right: auto;
+  width: auto;
+  position: relative;
+  clear: both;
+}
+#main-content{
+  position: relative;
+  z-index: 9;
+}
+.meta-header {
+  position: relative;
+  padding-top: 20px;
+}
+
+.header1{
+  padding:20px;
+}
+
+.page-header,h1{
+  margin: 0%;
+  overflow-wrap: break-word;
+  max-width: 100%;
+}
+.h1{
+ color: #2a7d2e
+}
+
+p{
+  margin:10px 0 20px 0;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  color:#2f2f2f;
+  hyphens:auto;
+}
+
+em{
+  font-style: italic;
+}
+
+
+strong{
+  font: weight 700px;
+}
+
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+
+.page-content{
+    padding: 5px 10%;
+}

@@ -1,0 +1,68 @@
+
+  <nav class="navbar navbar-expand-lg bg-dark navbar-dark bb" id="xy">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon "></span>
+    </button>
+
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <!-- <li class="nav-item"><a class="nav-link" routerLink="/admin-home" id="colarr">Home</a></li> -->
+        <li class="nav-item"><a class="nav-link" routerLink="/admin-user" id="colarr">Users management</a></li>
+        <li class="nav-item"><a class="nav-link" routerLink="/admin-product" id="colarr">product management</a></li>
+        <li class="nav-item"><a class="nav-link" routerLink="/admin-order" id="colarr">Order management</a></li>
+      </ul>
+
+    </div>
+  </nav>
+
+<div class="orderlist"></div>
+<div class="container" id="order">
+
+   <hr/>
+    <h1 class="text-center">Order</h1>
+    <hr/>
+
+
+     <table class="table table-success table-striped"
+
+     style="background-color: white; margin-top: 20px;  box-shadow: 0px 0px 19px 5px rgba(0, 0, 0, 0.5);">
+
+      <thead>
+      <tr>
+        <th>Full Name</th>
+        <th>Email</th>
+        <th>Mobile Number</th>
+        <th>City</th>
+        <th>Zip Code</th>
+        <th>Address</th>
+        <th>State</th>
+        <th>country</th>
+        <th>Status</th>
+        <th>Total Price</th>
+        <th width="220px">Action</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let order of Orderlist">
+
+        <td>{{ order.fullname }}</td>
+        <td>{{ order.email }}</td>
+        <td>{{ order.phone }}</td>
+        <td>{{ order.city }}</td>
+        <td>{{ order.zip }}</td>
+        <td>{{ order.address }}</td>
+        <td>{{ order.state }}</td>
+        <td>{{ order.country }}</td>
+        <td>{{ order.status }}</td>
+        <td>{{ order.totalprice }}</td>
+        <td>
+          <button type="submit" (click)="deleteOrder(order.id)" class="btn btn-danger deletebtn"><i class="material-icons">delete</i></button>
+        </td>
+        <hr/>
+      </tr>
+
+    </tbody>
+    </table>
+ </div>

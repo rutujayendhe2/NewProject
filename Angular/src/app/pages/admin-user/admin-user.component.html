@@ -1,0 +1,85 @@
+  <!-- <app-admin-header></app-admin-header>
+<div class=table>
+        <table class="table table-hover w-50"
+            style="background-color: white; margin-top: 100px;  box-shadow: 0px 0px 19px 5px rgba(0, 0, 0, 0.5);">
+            <thead>
+            <tr>
+                <th scope="col"><span class="flex-1">#</span></th>
+                <th scope="col"><span class="flex-1">Name</span></th>
+                <th scope="col"><span class="flex-1">E-mail</span></th>
+                <th scope="col">Delete</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr *ngFor="let user of userList;index as i">
+                <th scope="row">{{i+1}}</th>
+                <td>{{user.userName}}</td>
+                <td>{{user.userEmail}}</td>
+                <td>
+                <td><button class="btn btn-link"><i class="fa fa-trash" aria-hidden="true"></i></button>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+</div> -->
+
+<nav class="navbar navbar-expand-lg bg-dark navbar-dark bb" id="xy">
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+    aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon "></span>
+  </button>
+
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <!-- <li class="nav-item"><a class="nav-link" routerLink="/admin-home" id="colarr">Home</a></li> -->
+      <li class="nav-item"><a class="nav-link" routerLink="/admin-user" id="colarr">Users management</a></li>
+      <li class="nav-item"><a class="nav-link" routerLink="/admin-product" id="colarr">product management</a></li>
+      <li class="nav-item"><a class="nav-link" routerLink="/admin-order" id="colarr">Order management</a></li>
+    </ul>
+
+  </div>
+</nav>
+
+<div class="userList"></div>
+<div class="container" id="user">
+
+   <hr/>
+    <h1 class="text-center">User</h1>
+    <hr/>
+    <table class="table table-success table-striped"
+    style="background-color: white; margin-top: 20px;  box-shadow: 0px 0px 19px 5px rgba(0, 0, 0, 0.5);" >
+      <thead>
+      <tr> 
+        <th>Id</th>
+        <th>FirstName</th>
+        <th>LastName</th>
+        <th>EmailAdd</th>
+        <th>Address</th>
+        <th>PhoneNo</th>
+        <th width="220px">Action</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let user of userList">
+
+        <td>{{ user.id }}</td>
+        <td>{{ user.firstName }}</td>
+        <td>{{ user.lastName }}</td>
+        <td>{{ user.emailAdd }}</td>
+        <td>{{ user.phoneNo }}</td>
+        <td>{{ user.address }}</td>
+            <td>
+          <!-- <a  [routerLink]="['/Products/',product.id,'UpdateDetails']" class="btn btn-primary"> <i class="material-icons">edit</i></a> &nbsp; -->
+          <button type="submit" (click)="deleteUser(user.id)" class="btn btn-danger deletebtn"><i class="material-icons">delete</i></button>
+          <!-- <i class="material-icons">delete</i> -->
+        </td>
+        <hr/>
+      </tr>
+
+    </tbody>
+    </table>
+ </div>
+
+
+

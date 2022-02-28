@@ -1,0 +1,93 @@
+<img src="../../../assets/deal-bg.jpg" style="width:100%; height:50%; ">
+
+
+<div class="card-top container-fluid" style="background-color: #f3ffe6;">
+  <br>
+  <h1 class="text-center"><strong (click)="filter('')">Shop By Category</strong></h1>
+  <br>
+  <div class="container-fluid d-flex">
+    <div class="item text-center">
+      <a (click)="filter('')">
+        <img src="../../../assets/images/category-2.png" alt="Bulbs">
+        <br>
+        <h3><strong>All Vegetables</strong></h3>
+      </a>
+    </div>
+    <div class="item text-center">
+      <a (click)="filter('Stem')">
+        <img src="../../../assets/images/Stem-2.jpg" alt="Bulbs">
+        <br>
+        <h3><strong>Stem</strong></h3>
+      </a>
+    </div>
+    <div class="item text-center">
+      <a (click)="filter('Bulbs')">
+        <img src="../../../assets/images/Bulbs-2.jpg" alt="Bulbs">
+        <br>
+        <h3><strong>Bulbs</strong></h3>
+      </a>
+    </div>
+    <div class="item text-center">
+      <a (click)="filter('Leaf')">
+        <img src="../../../assets/images/Leaf-2.jpg" alt="Bulbs">
+        <br>
+        <h3><strong>Leaf</strong></h3>
+      </a>
+    </div>
+    <div class="item text-center">
+      <a (click)="filter('Fruit')">
+        <img src="../../../assets/images/Fruit-2.jpg" alt="Bulbs">
+        <br>
+        <h3><strong>Fruits</strong></h3>
+      </a>
+    </div>
+    <div class="item text-center">
+      <a (click)="filter('Flower')">
+        <img src="../../../assets/images/Flower-2.jpg" alt="Bulbs">
+        <br>
+        <h3><strong>Flower</strong></h3>
+      </a>
+    </div>
+    <div class="item text-center">
+      <a (click)="filter('Root and Tubers')">
+        <img src="../../../assets/images/Root-and-Tubers-2.jpg" alt="Bulbs">
+        <br>
+        <h3><strong>Roots and Tubers</strong></h3>
+      </a>
+    </div>
+    <div class="item text-center">
+      <a (click)="filter('Seeds')">
+        <img src="../../../assets/images/Seeds-2.jpg" alt="Bulbs">
+        <br>
+        <h3><strong>Seeds</strong></h3>
+      </a>
+    </div>
+  </div>
+</div>
+
+
+<div class="container-fluid" style="background-color: #f3ffe6;">
+  <div class="row">
+    <ng-container *ngFor="let item of filterCategory | filter:searchKey:'title'">
+      <div class="card col-3" style="background-color: #daffb3;">
+        <img src="{{item.image}}" alt="ProductListImage">
+        <h3><strong>Title : </strong>{{item.title}}</h3>
+        <p><strong>Category : </strong>{{item.category}}</p>
+        <p style="white-space: nowrap; overflow: hidden;text-overflow: ellipsis;max-width: 100ch;"><strong>Description :
+          </strong>{{item.description}}</p>
+        <p><strong>Price : </strong>{{item.price|currency : 'INR'}}</p>
+        <!-- <p><strong>Quantity : </strong> <input type="number" style="width:20%" id="quantity" [(ngModel)]="cartitem.quantity" min="1" max="3"> /Kg</p> -->
+        <span><strong>Quantity : in /Kg</strong> </span><br>
+        <select name="pQuantity" [(ngModel)]="pQuantity" id="" class="form-control" style="width: 95%;">
+          <option selected value="select" disabled class="text-primary">Select min - 1 | max - 5 </option>
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5</option>
+        </select>
+        <button class="btn btn-success" (click)=addtocart(item,pQuantity)>Add to cart</button>
+      </div>
+    </ng-container>
+  </div>
+</div>

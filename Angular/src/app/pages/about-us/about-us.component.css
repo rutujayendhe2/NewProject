@@ -1,0 +1,13 @@
+.InfoSection {
+  padding: 20px;
+  background-color: #f3ffe6;
+}
+
+.InfoSection p {
+  text-align: justify;
+  text-justify: inter-word;
+}
+
+/* .content{
+  height: 500px;
+} */

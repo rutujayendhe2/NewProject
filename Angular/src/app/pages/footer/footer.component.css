@@ -1,0 +1,13 @@
+.footer{
+	background-color: White;
+ padding-top: 40px;
+	color: white;
+  height: 40%;
+
+  position: bottom;
+}
+
+.footer a{
+  color: white;
+  padding-left: 15px;
+}

@@ -1,0 +1,81 @@
+
+.card-top{
+  position:relative;
+  display: flex;
+  flex-direction:column;
+  min-width: 0;
+  word-wrap: break-word;
+  background-color: white;
+  /* background-clip: border-box; */
+  border-bottom: 2px solid black;
+  border-top: 2px solid black;
+  /* border-radius: .25rem; */
+  /* margin: 10px; */
+}
+
+.card-top h1:hover{
+  transition: 0.2s ease-in-out;
+  transform: scale(1.0);
+  color: rgb(18, 107, 6);
+}
+
+.item {
+  margin: 0px 2px;
+}
+
+.item img:hover {
+  transition: 0.2s ease-in-out;
+  transform: scale(1.15);
+}
+.item a:hover{
+  color: rgb(18, 107, 6);
+}
+
+
+
+
+.example-card {
+    max-width: 65%;
+    border: solid 2px;
+  }
+
+  /* .card-group{
+
+  } */
+
+  .example-header-image {
+    background-image: url('https://material.angular.io/assets/img/examples/shiba1.jpg');
+    background-size: cover;
+  }
+
+  .card button{
+    width: 80%;
+    margin-left: 20px;
+    margin-top: 10px;
+    position:static;
+  }
+
+  .card{
+    padding: 5px 10px 5px 10px;
+    margin: 50px;
+    /* background-color: greenyellow; */
+    border: solid 1px black;
+    display: inline;
+    width: 23%;
+  }
+
+  .card img{
+    width: 80%;
+    height: 45%;
+    margin-left: 0px 0px 15px 5px;
+    margin-right: 0px;
+    padding-left: 25px;
+    transition: 0.3s ease-in-out;
+    position:relative;
+
+  }
+
+  .card img:hover{
+    transition: 0.3s ease-in-out;
+    transform: scale(1.1);
+  }
